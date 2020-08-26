@@ -115,7 +115,7 @@ namespace ProAgil.Repository
                     .ThenInclude(e => e.Evento);
             }
 
-            query = query.Where(p => p.Nome.ToLower().Contains(name.ToLower()))
+            query = query.Where(p => p.Nome.ToLower().Contains(name.ToLower()));
 
             return await query.ToArrayAsync();
         }
